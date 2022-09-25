@@ -1,0 +1,38 @@
+---
+title: "BA 23/09"
+author: "Sai Rohan"
+date: "2022-09-19"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Scatterplot between sales and price
+```{r}
+library(ISLR)
+data<- Carseats
+print(Carseats)
+
+plot(Carseats$Sales, Carseats$Price, main = "Scatterplot between Price and Sales", xlab = "Sales", ylab = "Price",abline(Carseats$Sales,Carseats$Price))
+barplot(Carseats$Price)
+```
+
+#maximum value attribute of advertisement
+```{r}
+max(Carseats$Advertising)
+```
+
+#summary of carseats
+```{r}
+summary(data)
+```
+
+#Interquartile range of price
+```{r}
+IQR(Carseats$Price)
+```
+
